@@ -11,6 +11,12 @@
 - 📊 周总结
 - ☁️ 自动备份到GitHub
 
+## 使用前提
+
+⚠️ **第一次使用前，请先截图桌面留底，备份到GitHub仓库。**
+
+防止AI误删或丢失文件。
+
 ## 快速开始
 
 ### 准备工作
@@ -18,6 +24,7 @@
 1. 安装 [Git](https://git-scm.com/)
 2. 注册 [GitHub](https://github.com) 账号
 3. 创建一个GitHub仓库
+4. **截图当前桌面，备份留底**
 
 ### 使用方法
 
@@ -62,6 +69,51 @@
 
 - [今日计划.md](./templates/今日计划.md)
 - [周总结.md](./templates/周总结.md)
+
+## AI模型支持
+
+**推荐：**
+- GLM（智谱）
+- Deepseek
+- Kimi
+
+**不推荐：**
+- minimax
+- Qwen3
+
+## 常见问题
+
+### 1. GitHub仓库名main与git本地仓库名master不同怎么办？
+
+初次在桌面git建立仓库，本地仓库默认master。
+
+**解决方案：**
+```
+提示词：我的GitHub仓库名是main，将本地仓库名修改为main
+```
+
+或手动执行：
+```bash
+git branch -m master main
+git push -u origin main
+```
+
+### 2. AI误删了文件怎么办？
+
+从GitHub仓库恢复：
+```bash
+git restore 文件名
+```
+
+或从远程拉取：
+```bash
+git fetch origin
+git reset --hard origin/main
+```
+
+### 3. 文件太多，整理太累怎么办？
+
+分批处理，每天处理一部分。AI会记住进度，下次继续。
 
 ## 开源协议
 
